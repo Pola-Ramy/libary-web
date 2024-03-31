@@ -1,0 +1,342 @@
+:root {
+    --main-header-color: #0f243d;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 320px;
+    background-color: var(--main-header-color);
+    position: relative;
+}
+
+.countiner {
+    height: 55%;
+    width: 90%;
+    background-color: var(--main-header-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    left: 50px;
+
+}
+
+.image {
+    left: 50%;
+    margin: 15px 0;
+    position: absolute;
+    height: 100vh;
+    display: inline-block;
+}
+
+.searchButtom {
+    top: 40px;
+    left: 40px;
+}
+
+.inputSearch {
+    position: absolute;
+    display: block;
+    margin: 8px;
+    top: 35px;
+    left: 100px;
+}
+
+input {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: transparent;
+    border: 2px solid #eee;
+    width: 250px;
+    color: #eee;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.inputSearch label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    padding: 0 4px;
+    color: #eee;
+    background-color: var(--main-header-color);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+/* input:not(:placeholder-shown)~label, */
+.inputSearch input:focus~label {
+    top: -8px;
+    font-size: 13px;
+}
+
+
+.userbuttom {
+    cursor: pointer;
+    left: 1100px;
+}
+
+.shoppingbuttom {
+    cursor: pointer;
+    left: 1175px;
+}
+
+.searchButtom,
+.shoppingbuttom,
+.userbuttom {
+    color: #eee;
+    top: 40px;
+    position: absolute;
+    background-color: var(--main-header-color);
+    font-size: 40px;
+    transform: scale(0.8);
+}
+
+.shoppingbuttom:hover,
+.userbuttom:hover {
+    transform: scale(1.1);
+}
+
+.links {
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    bottom: -50px;
+    position: absolute;
+}
+
+.ul {
+    bottom: -30px;
+    left: 180px;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    margin-left: 15px;
+    list-style: none;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+li:hover {
+    color: #cdcdcd;
+    transition: 0.4s all ease;
+}
+
+li::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #d3d8e2;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+a {
+    text-decoration-line: none;
+    color: #eee;
+    font-weight: 300;
+
+}
+
+/* start-section */
+.bodyImage {
+    width: 90%;
+    margin: 20px 0 10px 50px;
+}
+
+.bodyCountiner {
+    /* background-color: cadetblue; */
+    display: grid;
+    position: relative;
+    place-items: center;
+    margin: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Two columns */
+    gap: 10px;
+    /* Gap between grid items */
+}
+
+.item {
+    /* background-color: #eaeaea; */
+    padding: 10px;
+    margin: 10px;
+    height: 470px;
+    width: 250px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 8fr 2fr 0.8fr 4fr;
+    gap: 5px;
+}
+
+.imageItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageItem img {
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img2 {
+    display: none;
+}
+
+/* .img2:hover{
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+} */
+
+.item p {
+    font-size: 22px;
+    font-weight: 800;
+    direction: rtl;
+    margin-top: 10px;
+}
+
+.salary {
+    font-size: 18px;
+    margin-bottom: 10px;
+    direction: rtl;
+    font-weight: 800;
+}
+
+.AddToShop {
+    width: 100%;
+    color: #080710;
+    background: #fff;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.AddToShop::before {
+    content: " ";
+    z-index: -1;
+    top: 0%;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    transition: left 0.4s, color 0.4s;
+    background-color: var(--main-header-color);
+}
+
+.AddToShop:hover {
+    color: #fff;
+}
+
+.AddToShop:hover::before {
+    left: 0%;
+}
+
+/* end-section */
+/* start-footer */
+.footerContiner {
+    display: grid;
+    background-color: var(--main-header-color);
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    grid-template-rows: 1fr 1fr 1fr 0.8fr;
+}
+
+.emailWord,
+.motivation,
+.email,
+.soicalmedia {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 0.8px;
+    font-weight: 800;
+    color: #ffffffb8;
+}
+
+.motivation {
+    font-size: 24px;
+}
+
+.email {
+    font-size: 12px;
+}
+
+.inputEmail {
+    letter-spacing: 1.2px;
+    border-radius: 25px;
+    width: 320px;
+    height: 25px;
+    font-size: 20px;
+    padding: 20px 10px 10px 12px;
+
+}
+
+.EmailHere {
+    position: absolute;
+    left: 520px;
+    padding: 6px 4px;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.email button {
+    cursor: pointer;
+    border: 1px;
+    color: #eee;
+    background-color: var(--main-header-color);
+    position: absolute;
+    right: 514px;
+    margin: 18px 10px 10px 10px;
+    width: 25px;
+    height: 22px;
+    font-size: 24px;
+}
+
+.soicalmedia {
+    margin-bottom: 45px;
+    transform: scale(0.8);
+}
+
+.soicalmedia i {
+    font-size: 55px;
+    margin-left: 15px;
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.soicalmedia i:hover {
+    transform: scale(1.1);
+}
+
+/* end-footer */
